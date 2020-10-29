@@ -263,8 +263,11 @@ img {
 }
 
 h1 {
-  font-size: 9.2rem;
+  font-size: 8rem;
+  line-height: 9.2rem;
   letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: 'Lora', 'serif';
 }
 
 p {
@@ -491,4 +494,139 @@ nav ul li a:active {
 #homepage main .journey .journeyContainer .textContainer a {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+#homepage main .gallery {
+  padding: 100px 0;
+}
+
+#homepage main .gallery .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+#contact header {
+  position: relative;
+  padding-bottom: 100px;
+  background-color: #f0efed;
+}
+
+#contact header .wrapper .title {
+  position: absolute;
+  bottom: 5px;
+}
+
+#contact main {
+  background-color: #f0efed;
+}
+
+#contact main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact main .wrapper .contactInfo {
+  width: calc(35% - 30px);
+  background-color: white;
+  padding: 50px 40px;
+  max-height: 340px;
+}
+
+#contact main .wrapper .contactInfo .socialLinks {
+  color: #f6a823;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact main .wrapper .contactInfo .socialLinks li {
+  margin: 0 30px 0 0;
+}
+
+#contact main .wrapper .contactInfo .socialLinks li a {
+  font-size: 3.6rem;
+}
+
+#contact main .wrapper .contactInfo p:first-of-type {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 20px 0;
+}
+
+#contact main .wrapper .form {
+  width: 65%;
+  padding-bottom: 80px;
+}
+
+#contact main .wrapper .form .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.8rem;
+}
+
+#contact main .wrapper .form .contactForm input {
+  border: none;
+}
+
+#contact main .wrapper .form .contactForm input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#contact main .wrapper .form .contactForm input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+#contact main .wrapper .form .contactForm input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+#contact main .wrapper .form .contactForm input::placeholder {
+  font-style: italic;
+}
+
+#contact main .wrapper .form .contactForm #name, #contact main .wrapper .form .contactForm #email {
+  width: calc(50% - 5px);
+  padding: 20px;
+}
+
+#contact main .wrapper .form .contactForm #name {
+  margin-right: 5px;
+}
+
+#contact main .wrapper .form .contactForm #email {
+  margin-left: 5px;
+}
+
+#contact main .wrapper .form .contactForm #message {
+  margin: 20px 0;
+  width: 100%;
+  padding: 35px 0 300px 20px;
+}
+
+#contact main .wrapper .form .contactForm #submit {
+  background-color: #05afc1;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #2c2c2c;
+  color: #f0efed;
+  text-align: center;
+  padding: 5px 0;
 }

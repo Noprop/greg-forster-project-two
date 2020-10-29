@@ -1,1 +1,2 @@
  - link all a tags linkable if needed
+ - add hover/scale increase to gallery images! exciting :)

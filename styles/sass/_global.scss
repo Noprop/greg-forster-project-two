@@ -31,8 +31,11 @@ img {
   display: block;
 }
 h1 {
-  font-size: 9.2rem;
+  font-size: 8rem;
+  line-height: 9.2rem;
   letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: 'Lora', 'serif';
 }
 p {
   font-size: 2rem;
