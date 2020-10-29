@@ -256,19 +256,26 @@ a {
   text-transform: uppercase;
 }
 
-img {
-  width: 100%;
-  height: auto;
+h1 {
+  font-size: 9.2rem;
+  letter-spacing: 0;
+}
+
+p {
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 3.2rem;
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1480px;
   width: 90%;
   margin: 0 auto;
 }
 
 nav {
   text-transform: uppercase;
+  width: 100%;
   background-color: #f6a823;
 }
 
@@ -297,4 +304,143 @@ nav ul li h2 {
 nav ul li a:hover,
 nav ul li a:active {
   color: white;
+}
+
+#homepage header {
+  background-color: #f6a823;
+  height: 80vh;
+}
+
+#homepage header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  height: 75%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#homepage header .wrapper .title {
+  height: 300px;
+  width: 40%;
+  position: relative;
+}
+
+#homepage header .wrapper .title img {
+  position: absolute;
+  top: 25%;
+}
+
+#homepage header .wrapper .title h1 {
+  margin-left: 60px;
+}
+
+#homepage header .wrapper .headerImage {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  -webkit-box-shadow: 10px 10px white;
+          box-shadow: 10px 10px white;
+}
+
+#homepage main h2 {
+  text-transform: uppercase;
+  font-size: 4.2rem;
+}
+
+#homepage main .intro .who {
+  background-color: #f0efed;
+  padding: 80px;
+}
+
+#homepage main .favourites {
+  margin-bottom: 200px;
+}
+
+#homepage main .favourites .redBackdrop {
+  background-color: #a82706;
+  width: 50%;
+  height: 50%;
+  z-index: -1;
+  position: absolute;
+}
+
+#homepage main .favourites .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#homepage main .favourites .wrapper .imgContainer {
+  padding-left: 85px;
+}
+
+#homepage main .favourites .wrapper .textContainer {
+  width: 35%;
+}
+
+#homepage main .connect {
+  margin-top: 100px;
+  background-color: #f0efed;
+}
+
+#homepage main .connect h3 {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+}
+
+#homepage main .connect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#homepage main .connect .wrapper .connectQuarter {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#homepage main .connect .wrapper .connectQuarter .iconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 2.4rem;
+  width: 50px;
+  height: 50px;
+  background-color: #f6a823;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+#homepage main .connect .wrapper .connectQuarter p {
+  width: calc(100% - 70px);
+  margin-left: auto;
 }
