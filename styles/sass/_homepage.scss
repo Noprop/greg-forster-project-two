@@ -91,7 +91,7 @@
           .iconContainer {
             display: flex;
             justify-content: center;
-            align-items: center;     
+            align-items: center;
             text-align: center;
             font-size: 2.4rem;
             width: 50px;
@@ -103,7 +103,36 @@
           }
           p {
             width: calc(100% - 70px);
-            margin-left: auto;
+            margin-left: 70px;
+          }
+        }
+      }
+    }
+    // Sophie's Journey section styling 
+    .journey {  
+      background-color: $whiteShade;
+      p {
+        margin: 25px 0;
+      }
+      .banner {
+        min-width: 100vw;
+      }
+      .journeyContainer {
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .imgContainer {
+          width: 25%;
+          box-shadow: 20px 20px $orangeYellow;
+        }
+        .textContainer {
+          width: 60%;
+          display: flex;
+          flex-wrap: wrap;
+
+          a {
+            align-self: flex-end;
           }
         }
       }

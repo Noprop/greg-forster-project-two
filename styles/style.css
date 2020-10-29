@@ -256,6 +256,12 @@ a {
   text-transform: uppercase;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1 {
   font-size: 9.2rem;
   letter-spacing: 0;
@@ -269,7 +275,7 @@ p {
 
 .wrapper {
   max-width: 1480px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -442,5 +448,47 @@ nav ul li a:active {
 
 #homepage main .connect .wrapper .connectQuarter p {
   width: calc(100% - 70px);
-  margin-left: auto;
+  margin-left: 70px;
+}
+
+#homepage main .journey {
+  background-color: #f0efed;
+}
+
+#homepage main .journey p {
+  margin: 25px 0;
+}
+
+#homepage main .journey .banner {
+  min-width: 100vw;
+}
+
+#homepage main .journey .journeyContainer {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#homepage main .journey .journeyContainer .imgContainer {
+  width: 25%;
+  -webkit-box-shadow: 20px 20px #f6a823;
+          box-shadow: 20px 20px #f6a823;
+}
+
+#homepage main .journey .journeyContainer .textContainer {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#homepage main .journey .journeyContainer .textContainer a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
