@@ -261,12 +261,27 @@ img {
   display: block;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 8rem;
   line-height: 9.2rem;
   letter-spacing: 0;
-  text-transform: uppercase;
   font-family: 'Lora', 'serif';
+}
+
+h2, h3, a {
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+h3 {
+  font-size: 3.2rem;
 }
 
 p {
@@ -283,6 +298,36 @@ ul {
   max-width: 1480px;
   width: 85%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  .wrapper {
+    width: 95%;
+  }
 }
 
 nav {
@@ -360,15 +405,6 @@ nav ul li a:active {
   top: 50px;
   -webkit-box-shadow: 15px 15px white;
           box-shadow: 15px 15px white;
-}
-
-#homepage main h2 {
-  text-transform: uppercase;
-  font-size: 4.2rem;
-}
-
-#homepage main h3 {
-  font-size: 3.2rem;
 }
 
 #homepage main a {
@@ -478,11 +514,6 @@ nav ul li a:active {
 #homepage main .connect {
   padding: 125px 0 80px 0;
   background-color: #f0efed;
-}
-
-#homepage main .connect h3 {
-  font-size: 3.2rem;
-  letter-spacing: 0.1rem;
 }
 
 #homepage main .connect .wrapper ul {
@@ -622,6 +653,13 @@ nav ul li a:active {
   bottom: 5px;
 }
 
+@media (max-width: 768px) {
+  #contact header .wrapper .title {
+    width: 90%;
+    text-align: center;
+  }
+}
+
 #contact main {
   background-color: #f0efed;
   padding-bottom: 100px;
@@ -636,11 +674,47 @@ nav ul li a:active {
           justify-content: space-between;
 }
 
+@media (max-width: 940px) {
+  #contact main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #contact main .wrapper .contactInfo {
   width: calc(35% - 30px);
   background-color: white;
   padding: 50px 40px;
   max-height: 340px;
+}
+
+@media (max-width: 1300px) {
+  #contact main .wrapper .contactInfo {
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 940px) {
+  #contact main .wrapper .contactInfo {
+    width: 60%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact main .wrapper .contactInfo {
+    width: 70%;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact main .wrapper .contactInfo {
+    width: 90%;
+  }
 }
 
 #contact main .wrapper .contactInfo .socialLinks {
@@ -651,8 +725,22 @@ nav ul li a:active {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  #contact main .wrapper .contactInfo .socialLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #contact main .wrapper .contactInfo .socialLinks li {
   margin: 0 30px 0 0;
+}
+
+@media (max-width: 768px) {
+  #contact main .wrapper .contactInfo .socialLinks li {
+    margin: 0 15px;
+  }
 }
 
 #contact main .wrapper .contactInfo .socialLinks li a {
@@ -667,6 +755,12 @@ nav ul li a:active {
 
 #contact main .wrapper .form {
   width: 65%;
+}
+
+@media (max-width: 940px) {
+  #contact main .wrapper .form {
+    width: 100%;
+  }
 }
 
 #contact main .wrapper .form .contactForm {
@@ -727,6 +821,26 @@ nav ul li a:active {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  #contact main .wrapper .form .contactForm #name, #contact main .wrapper .form .contactForm #email {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact main .wrapper .form .contactForm #name {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contactInfo {
+    max-height: 800px;
+    background-color: red;
+  }
+}
+
 #blog header {
   position: relative;
   padding-bottom: 100px;
@@ -750,9 +864,11 @@ nav ul li a:active {
   grid-gap: 35px;
 }
 
-#blog main .wrapper h2, #blog main .wrapper h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+@media (max-width: 940px) {
+  #blog main .wrapper {
+    display: block;
+    padding-bottom: 50px;
+  }
 }
 
 #blog main .wrapper h4 {
@@ -782,10 +898,6 @@ nav ul li a:active {
           flex-direction: column;
 }
 
-#blog main .wrapper .info h3 {
-  font-size: 2.4rem;
-}
-
 #blog main .wrapper .info h3, #blog main .wrapper .info img, #blog main .wrapper .info .about {
   margin-bottom: 25px;
 }
@@ -800,6 +912,51 @@ nav ul li a:active {
   color: #f6a823;
   display: inline-block;
   width: 20px;
+}
+
+@media (max-width: 940px) {
+  #blog main .wrapper .info .recentPosts {
+    height: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog main .wrapper .info .recentPosts {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 940px) {
+  #blog main .wrapper .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog main .wrapper .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 940px) {
+  #blog main .wrapper .info .about, #blog main .wrapper .info .recentPosts {
+    width: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog main .wrapper .info .about, #blog main .wrapper .info .recentPosts {
+    width: 100%;
+  }
 }
 
 #blog main .wrapper .right .post, #blog main .wrapper .right .commentsContainer .comment:nth-child(2) {
@@ -828,6 +985,19 @@ nav ul li a:active {
   -ms-grid-columns: 1fr 5fr;
       grid-template-columns: 1fr 5fr;
   grid-gap: 15px;
+}
+
+@media (max-width: 480px) {
+  #blog main .wrapper .right .commentsContainer .comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #blog main .wrapper .right .commentsContainer .comment img {
+    max-width: 150px;
+  }
 }
 
 #blog main .wrapper .right .commentForm {
@@ -888,6 +1058,19 @@ nav ul li a:active {
   width: 100%;
   padding: 10px 0;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  #blog main .wrapper .right .commentForm #name, #blog main .wrapper .right .commentForm #email {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog main .wrapper .right .commentForm #name {
+    margin-bottom: 20px;
+  }
 }
 
 footer {

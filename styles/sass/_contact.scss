@@ -1,3 +1,5 @@
+// CONTACT page styling
+
 #contact {
   // below is used to keep footer at bottom of page for tall screens
   min-height: 100vh;
@@ -6,7 +8,6 @@
   main {
     flex-grow: 1;
   }
-  
 
   header {
     position: relative;
@@ -16,6 +17,11 @@
     .wrapper .title {
       position: absolute;
       bottom: 5px;
+      
+      @media(max-width: 768px) {
+        width: 90%;
+        text-align: center;
+      }
     }
   }
   main {
@@ -25,73 +31,121 @@
     .wrapper {
       display: flex;
       justify-content: space-between;
+
+      @media(max-width: 940px) {
+        flex-direction: column;
+      }
     
-    .contactInfo {
-      width: calc(35% - 30px);
-      background-color: white;
-      padding: 50px 40px;
-      max-height: 340px; 
-      // probably wanna find a better solution
+      .contactInfo {
+        width: calc(35% - 30px);
+        background-color: white;
+        padding: 50px 40px;
+        max-height: 340px; 
+      
+        @media(max-width: 1300px) {
+          max-height: 100%;
+        }
+        @media(max-width: 940px) {
+          width: 60%;
+          margin-bottom: 40px;
+        }
+        @media(max-width: 768px) {
+          width: 70%;
+          margin: 0 auto 40px auto;
+          text-align: center;
+        }
+        @media(max-width: 480px) {
+          width: 90%;
+        }
 
-      .socialLinks {
-        color: $orangeYellow;
-        list-style: none;
-        display: flex;
+        .socialLinks {
+          color: $orangeYellow;
+          list-style: none;
+          display: flex;
 
-        li {
-          margin: 0 30px 0 0;
+          @media(max-width: 768px) {
+            justify-content: center;
+          }
+          li {
+            margin: 0 30px 0 0;
+            @media(max-width: 768px) {
+              margin: 0 15px;
+            }
+            a {
+              font-size: 3.6rem;
+            }
+          }
+        }
+        p:first-of-type {
+          font-weight: 700;
+          font-size: 2.4rem;
+          margin: 20px 0;
+        }
+      }
+      .form {
+        width: 65%;
+        
+        @media(max-width: 940px) {
+          width: 100%;
+        }
+        
+        .contactForm {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          font-size: 1.8rem;
 
-          a {
-            font-size: 3.6rem;
+          input {
+            border: none;
+          }
+          input::placeholder {
+            font-style: italic;
+          }
+          
+          #name, #email {
+            width: calc(50% - 5px);
+            padding: 20px;
+          }
+          #name {
+            margin-right: 5px;
+          }
+          #email {
+            margin-left: 5px;
+          }
+          #message {
+            margin: 20px 0;
+            width: 100%;
+            padding: 35px 0 250px 20px;
+          }
+          #submit {
+            background-color: $accent;
+            width: 100%;
+            padding: 10px 0;
+            font-weight: 700;
+          }
+          #name, #email {
+            @media(max-width: 768px) {
+              width: 100%;
+              margin: 0;
+            }
+          }
+          #name {
+            @media(max-width: 768px) {
+              margin-bottom: 20px;
+            }
           }
         }
       }
-      p:first-of-type {
-        font-weight: 700;
-        font-size: 2.4rem;
-        margin: 20px 0;
-      }
     }
-    .form {
-      width: 65%;
-      
-      .contactForm {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        font-size: 1.8rem;
-
-        input {
-          border: none;
-        }
-        input::placeholder {
-          font-style: italic;
-        }
-        
-        #name, #email {
-          width: calc(50% - 5px);
-          padding: 20px;
-        }
-        #name {
-          margin-right: 5px;
-        }
-        #email {
-          margin-left: 5px;
-        }
-        #message {
-          margin: 20px 0;
-          width: 100%;
-          padding: 35px 0 250px 20px;
-        }
-        #submit {
-          background-color: $accent;
-          width: 100%;
-          padding: 10px 0;
-          font-weight: 700;
-        }
-      }
-    }
-  }
   }
 }
 
+@media(max-width: 1300px) {
+  .contactInfo {
+    max-height: 800px;
+    background-color: red;
+  }
+}
+// @media(max-width: 1000px) {
+
+// }

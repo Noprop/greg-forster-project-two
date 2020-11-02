@@ -1,3 +1,5 @@
+// BLOG page styling
+
 #blog {
   header {
     position: relative;
@@ -16,11 +18,12 @@
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 35px;
-    
-      h2, h3 {
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
+
+      @media(max-width: 940px) {
+        display: block;
+        padding-bottom: 50px;
       }
+
       h4 {
         font-style: italic;
         font-size: 2rem;
@@ -40,9 +43,6 @@
         display: flex;
         flex-direction: column;
 
-        h3 {
-            font-size: 2.4rem;
-        }
         h3, img, .about {
           margin-bottom: 25px;
         }
@@ -58,6 +58,27 @@
             color: $orangeYellow; 
             display: inline-block; 
             width: 20px; 
+          }
+          @media(max-width: 940px) {
+            height: 90%;
+          }
+          @media(max-width: 768px) {
+            margin-bottom: 25px;
+          }
+        }
+        @media(max-width: 940px) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        @media(max-width: 768px) {
+          flex-direction: column;
+        }
+        .about, .recentPosts {
+          @media(max-width: 940px) {
+            width: 49%;
+          }
+          @media(max-width: 768px) {
+            width: 100%;
           }
         }
       }
@@ -84,6 +105,15 @@
             display: grid;
             grid-template-columns: 1fr 5fr;
             grid-gap: 15px;
+
+            @media(max-width: 480px) {
+              display: flex;
+              flex-wrap: wrap;
+
+              img {
+                max-width: 150px;
+              }
+            }
           }
         }
 
@@ -122,6 +152,17 @@
             width: 100%;
             padding: 10px 0;
             font-weight: 700;
+          }
+          #name, #email {
+            @media(max-width: 768px) {
+              width: 100%;
+              margin: 0;
+            }
+          }
+          #name {
+            @media(max-width: 768px) {
+              margin-bottom: 20px;
+            }
           }
         }
       }
