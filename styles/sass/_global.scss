@@ -57,10 +57,9 @@ ul {
 }
 .wrapper {
   max-width: 1480px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
-
 @media(max-width: 768px) {
   h1 {
     font-size: 6rem;
@@ -87,5 +86,10 @@ ul {
   }
   .wrapper {
     width: 95%;
+  }
+}
+@media(max-width: 360px) {
+  h2 {
+    font-size: 3.2rem;
   }
 }
