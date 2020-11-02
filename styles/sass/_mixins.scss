@@ -1,0 +1,8 @@
+@mixin button {
+  color: $black;
+  background-color: $accent;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}

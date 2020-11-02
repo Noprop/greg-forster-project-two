@@ -371,6 +371,19 @@ nav ul li a:active {
   font-size: 3.2rem;
 }
 
+#homepage main a {
+  color: #2c2c2c;
+  background-color: #05afc1;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+#homepage main .intro p {
+  margin: 20px 0 40px 0;
+}
+
 #homepage main .intro .who {
   background-color: #f0efed;
   padding: 80px 0 120px 0;
@@ -397,14 +410,14 @@ nav ul li a:active {
 #homepage main .intro .favourites .wrapper .imageContainer {
   position: relative;
   width: 50%;
-  height: calc(vw / 2);
 }
 
 #homepage main .intro .favourites .wrapper .imageContainer img {
   position: absolute;
-  top: -20px;
+  top: -30px;
   -webkit-box-shadow: -200px 15px #a82706, 15px 15px #a82706;
           box-shadow: -200px 15px #a82706, 15px 15px #a82706;
+  height: 100%;
 }
 
 #homepage main .intro .favourites .wrapper .textContainer {
@@ -418,12 +431,52 @@ nav ul li a:active {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 40%;
-  height: calc(vw / 2);
+  width: 42%;
+  height: 400px;
+}
+
+#homepage main .intro .favourites .wrapper .textContainer p {
+  margin-bottom: 30px;
+}
+
+#homepage main .intro .favourites .wrapper .textContainer a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#homepage main .intro .travels {
+  margin-bottom: 80px;
+}
+
+#homepage main .intro .travels .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#homepage main .intro .travels .wrapper .textContainer {
+  width: 42%;
+  text-align: right;
+}
+
+#homepage main .intro .travels .wrapper .imageContainer {
+  position: relative;
+  width: 50%;
+}
+
+#homepage main .intro .travels .wrapper .imageContainer img {
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: 200px 15px #f6a823, 15px 15px #f6a823;
+          box-shadow: 200px 15px #f6a823, 15px 15px #f6a823;
+  max-width: 596px;
 }
 
 #homepage main .connect {
-  margin-top: 100px;
+  padding: 125px 0 80px 0;
   background-color: #f0efed;
 }
 
@@ -432,16 +485,23 @@ nav ul li a:active {
   letter-spacing: 0.1rem;
 }
 
-#homepage main .connect .wrapper {
+#homepage main .connect .wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#homepage main .connect .wrapper .connectQuarter {
-  width: 50%;
+#homepage main .connect .wrapper ul p {
+  margin-top: 20px;
+}
+
+#homepage main .connect .wrapper ul li {
+  width: 47%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,9 +510,10 @@ nav ul li a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 
-#homepage main .connect .wrapper .connectQuarter .iconContainer {
+#homepage main .connect .wrapper ul li .iconContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,7 +532,7 @@ nav ul li a:active {
   margin-right: 20px;
 }
 
-#homepage main .connect .wrapper .connectQuarter p {
+#homepage main .connect .wrapper ul li p {
   width: calc(100% - 70px);
   margin-left: 70px;
 }
@@ -500,6 +561,9 @@ nav ul li a:active {
 
 #homepage main .journey .journeyContainer .imgContainer {
   width: 25%;
+}
+
+#homepage main .journey .journeyContainer .imgContainer img {
   -webkit-box-shadow: 20px 20px #f6a823;
           box-shadow: 20px 20px #f6a823;
 }
@@ -530,6 +594,23 @@ nav ul li a:active {
   grid-gap: 30px;
 }
 
+#contact {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 #contact header {
   position: relative;
   padding-bottom: 100px;
@@ -543,7 +624,7 @@ nav ul li a:active {
 
 #contact main {
   background-color: #f0efed;
-  padding-bottom: auto;
+  padding-bottom: 100px;
 }
 
 #contact main .wrapper {
@@ -586,7 +667,6 @@ nav ul li a:active {
 
 #contact main .wrapper .form {
   width: 65%;
-  padding-bottom: 80px;
 }
 
 #contact main .wrapper .form .contactForm {

@@ -43,7 +43,14 @@
     h3 {
       font-size: 3.2rem;
     }
+    a {
+      @include button;
+    }
+
     .intro {
+      p {
+        margin: 20px 0 40px 0;
+      }
       .who {
         background-color: $whiteShade;
         padding: 80px 0 120px 0;
@@ -54,7 +61,6 @@
 
       .favourites {
         padding-bottom: 50px;
-        // margin-bottom: 300px;
         height: 500px;
 
       
@@ -65,21 +71,49 @@
           .imageContainer {
             position: relative;
             width: 50%;
-            height: calc(vw / 2);
 
             img {
               position: absolute;
-              top: -20px;
+              top: -30px;
               box-shadow: -200px 15px $rustRed, 15px 15px $rustRed;
+              height: 100%;
             }
-            
           }
           .textContainer {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            width: 40%;
-            height: calc(vw / 2);
+            width: 42%;
+            height: 400px;
+
+            p {
+              margin-bottom: 30px;
+            }
+            a {
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+      .travels {
+        margin-bottom: 80px;
+        .wrapper {
+          display: flex;
+          justify-content: space-between;
+
+          .textContainer {
+            width: 42%;
+            text-align: right;
+          }
+          .imageContainer {
+            position: relative;
+            width: 50%;
+            img {
+              position: absolute;
+              right: 0;
+              box-shadow: 200px 15px $orangeYellow, 15px 15px $orangeYellow;
+              max-width: 596px;
+            }
           }
         }
       }
@@ -87,23 +121,27 @@
 
     // four snippets styling
     .connect {
-      margin-top: 100px; // TEMP CODE DELETE
+      padding: 125px 0 80px 0; // TEMP CODE DELETE
       background-color: $whiteShade;
 
       h3 {
         font-size: 3.2rem;
         letter-spacing: 0.1rem;
       }
-      .wrapper {
+      .wrapper ul {
         display: flex;
         flex-wrap: wrap;
-        
-        
-        .connectQuarter {
-          width: 50%;
+        justify-content: space-between;
+
+        p {
+          margin-top: 20px;
+        }
+        li {
+          width: 47%;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
+          margin-bottom: 40px;
 
           .iconContainer {
             display: flex;
@@ -141,7 +179,10 @@
 
         .imgContainer {
           width: 25%;
-          box-shadow: 20px 20px $orangeYellow;
+          
+          img {
+            box-shadow: 20px 20px $orangeYellow;
+          }
         }
         .textContainer {
           width: 60%;
