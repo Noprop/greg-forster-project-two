@@ -301,6 +301,10 @@ ul {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   h1 {
     font-size: 6rem;
   }
@@ -342,6 +346,14 @@ nav {
   background-color: #f6a823;
 }
 
+nav input {
+  display: none;
+}
+
+nav i {
+  opacity: 0;
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,8 +376,71 @@ nav ul li h2 {
 }
 
 nav ul li a:hover,
-nav ul li a:active {
+nav ul li a:focus {
   color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    /* NAV hamburger menu */
+    /* design from here: https://codepen.io/erikterwan/pen/EVzeRP?editors=1100 */
+    height: 70px;
+  }
+  nav .collapsibleMenu {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+  }
+  nav .collapsibleMenu input,
+  nav .collapsibleMenu i {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  nav .collapsibleMenu i {
+    opacity: 1;
+  }
+  nav .collapsibleMenu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    /* hides the checkbox */
+    z-index: 2;
+    /* places it over the hamburger menu */
+  }
+  nav .collapsibleMenu i {
+    display: block;
+    z-index: 1;
+    font-size: 4rem;
+  }
+  nav .menuContent {
+    background-color: #a82706;
+    position: absolute;
+    padding: 0;
+    right: -5000px;
+  }
+  nav #menu:checked ~ .menuContent {
+    right: 0;
+    width: 200px;
+  }
+  nav .menuContent ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  nav .menuContent li {
+    width: 100%;
+    padding: 10px;
+  }
+  nav .menuContent li:nth-child(3) {
+    display: none;
+  }
 }
 
 #homepage header {
@@ -839,7 +914,7 @@ nav ul li a:active {
 #homepage main .gallery .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
@@ -889,6 +964,12 @@ nav ul li a:active {
   #contact header .wrapper .title {
     width: 90%;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact header .wrapper .title {
+    bottom: 25px;
   }
 }
 
@@ -1051,6 +1132,7 @@ nav ul li a:active {
   width: 100%;
   padding: 10px 0;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -1075,6 +1157,12 @@ nav ul li a:active {
 #blog header .wrapper .title {
   position: absolute;
   bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  #blog header .wrapper .title {
+    bottom: 15px;
+  }
 }
 
 #blog main {
@@ -1283,6 +1371,7 @@ nav ul li a:active {
   width: 100%;
   padding: 10px 0;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {

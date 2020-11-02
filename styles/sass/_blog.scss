@@ -9,6 +9,10 @@
     .wrapper .title {
       position: absolute;
       bottom: 5px;
+
+      @media(max-width: 768px) {
+        bottom: 15px;
+      }
     }
   }
   main {
@@ -152,6 +156,7 @@
             width: 100%;
             padding: 10px 0;
             font-weight: 700;
+            text-transform: uppercase;
           }
           #name, #email {
             @media(max-width: 768px) {

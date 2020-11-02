@@ -14,15 +14,21 @@
 <body id="blog">
   <header>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li>
-          <h2>Sophie</h2>
-        </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="collapsibleMenu">
+        <i class="fas fa-bars"></i>
+        <input type="checkbox" id="menu">
+        <div class="menuContent">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li>
+              <h2>Sophie</h2>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <img src="./assets/blog-image-1.jpg" alt="Background image of">
     <div class="wrapper">
@@ -118,7 +124,7 @@
 
             <label for="comment" class="srOnly">Enter message here</label>
             <input type="text" placeholder="Comment" name="Comment" id="comment">
-            <input type="submit" value="POST COMMENT" id="submit">
+            <input type="submit" value="Post Comment" id="submit">
           </form>
         </section>
       </div>
