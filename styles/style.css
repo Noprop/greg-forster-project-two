@@ -253,7 +253,6 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: 2rem;
-  text-transform: uppercase;
 }
 
 img {
@@ -276,6 +275,10 @@ p {
   line-height: 3.2rem;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   max-width: 1480px;
   width: 85%;
@@ -292,7 +295,6 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -342,19 +344,22 @@ nav ul li a:active {
 
 #homepage header .wrapper .title img {
   position: absolute;
-  top: 25%;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 #homepage header .wrapper .title h1 {
   margin-left: 60px;
+  font-size: 13rem;
 }
 
 #homepage header .wrapper .headerImage {
   position: absolute;
+  width: 40%;
   right: 0;
   top: 50px;
-  -webkit-box-shadow: 10px 10px white;
-          box-shadow: 10px 10px white;
+  -webkit-box-shadow: 15px 15px white;
+          box-shadow: 15px 15px white;
 }
 
 #homepage main h2 {
@@ -362,42 +367,59 @@ nav ul li a:active {
   font-size: 4.2rem;
 }
 
+#homepage main h3 {
+  font-size: 3.2rem;
+}
+
 #homepage main .intro .who {
   background-color: #f0efed;
-  padding: 80px;
+  padding: 80px 0 120px 0;
 }
 
-#homepage main .favourites {
-  margin-bottom: 200px;
+#homepage main .intro .who p {
+  width: 80%;
 }
 
-#homepage main .favourites .redBackdrop {
-  background-color: #a82706;
-  width: 50%;
-  height: 50%;
-  z-index: -1;
-  position: absolute;
+#homepage main .intro .favourites {
+  padding-bottom: 50px;
+  height: 500px;
 }
 
-#homepage main .favourites .wrapper {
+#homepage main .intro .favourites .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#homepage main .favourites .wrapper .imgContainer {
-  padding-left: 85px;
+#homepage main .intro .favourites .wrapper .imageContainer {
+  position: relative;
+  width: 50%;
+  height: calc(vw / 2);
 }
 
-#homepage main .favourites .wrapper .textContainer {
-  width: 35%;
+#homepage main .intro .favourites .wrapper .imageContainer img {
+  position: absolute;
+  top: -20px;
+  -webkit-box-shadow: -200px 15px #a82706, 15px 15px #a82706;
+          box-shadow: -200px 15px #a82706, 15px 15px #a82706;
+}
+
+#homepage main .intro .favourites .wrapper .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 40%;
+  height: calc(vw / 2);
 }
 
 #homepage main .connect {
@@ -521,6 +543,7 @@ nav ul li a:active {
 
 #contact main {
   background-color: #f0efed;
+  padding-bottom: auto;
 }
 
 #contact main .wrapper {
@@ -614,10 +637,173 @@ nav ul li a:active {
 #contact main .wrapper .form .contactForm #message {
   margin: 20px 0;
   width: 100%;
-  padding: 35px 0 300px 20px;
+  padding: 35px 0 250px 20px;
 }
 
 #contact main .wrapper .form .contactForm #submit {
+  background-color: #05afc1;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+#blog header {
+  position: relative;
+  padding-bottom: 100px;
+  background-color: #f0efed;
+}
+
+#blog header .wrapper .title {
+  position: absolute;
+  bottom: 5px;
+}
+
+#blog main {
+  background-color: #f0efed;
+}
+
+#blog main .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 35px;
+}
+
+#blog main .wrapper h2, #blog main .wrapper h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+#blog main .wrapper h4 {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+#blog main .wrapper span, #blog main .wrapper .comment h4, #blog main .wrapper a {
+  color: #385e64;
+  font-weight: 700;
+}
+
+#blog main .wrapper .about, #blog main .wrapper .recentPosts, #blog main .wrapper .post, #blog main .wrapper .comment {
+  background-color: white;
+  padding: 35px;
+}
+
+#blog main .wrapper .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#blog main .wrapper .info h3 {
+  font-size: 2.4rem;
+}
+
+#blog main .wrapper .info h3, #blog main .wrapper .info img, #blog main .wrapper .info .about {
+  margin-bottom: 25px;
+}
+
+#blog main .wrapper .info .recentPosts li {
+  font-size: 2rem;
+  line-height: 2.9rem;
+}
+
+#blog main .wrapper .info .recentPosts ul li::before {
+  content: "\2022";
+  color: #f6a823;
+  display: inline-block;
+  width: 20px;
+}
+
+#blog main .wrapper .right .post, #blog main .wrapper .right .commentsContainer .comment:nth-child(2) {
+  border-bottom: 5px solid #f6a823;
+}
+
+#blog main .wrapper .right .post h2 {
+  font-size: 3.2rem;
+}
+
+#blog main .wrapper .right .post p {
+  margin-bottom: 20px;
+}
+
+#blog main .wrapper .right .commentsContainer {
+  margin: 30px 0;
+}
+
+#blog main .wrapper .right .commentsContainer .comment:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+#blog main .wrapper .right .commentsContainer .comment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  grid-gap: 15px;
+}
+
+#blog main .wrapper .right .commentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+}
+
+#blog main .wrapper .right .commentForm input {
+  border: none;
+}
+
+#blog main .wrapper .right .commentForm input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#blog main .wrapper .right .commentForm input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+#blog main .wrapper .right .commentForm input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+#blog main .wrapper .right .commentForm input::placeholder {
+  font-style: italic;
+}
+
+#blog main .wrapper .right .commentForm #name, #blog main .wrapper .right .commentForm #email {
+  width: calc(50% - 5px);
+  padding: 20px;
+  padding-left: 30px;
+}
+
+#blog main .wrapper .right .commentForm #name {
+  margin-right: 5px;
+}
+
+#blog main .wrapper .right .commentForm #email {
+  margin-left: 5px;
+}
+
+#blog main .wrapper .right .commentForm #comment {
+  margin: 20px 0;
+  width: 100%;
+  padding: 35px 0 200px 30px;
+}
+
+#blog main .wrapper .right .commentForm #submit {
   background-color: #05afc1;
   width: 100%;
   padding: 10px 0;

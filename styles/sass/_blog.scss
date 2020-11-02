@@ -1,0 +1,130 @@
+#blog {
+  header {
+    position: relative;
+    padding-bottom: 100px;
+    background-color: $whiteShade;
+
+    .wrapper .title {
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+  main {
+    background-color: $whiteShade;
+    
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 35px;
+    
+      h2, h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+      h4 {
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+      span, .comment h4, a {
+        color: $darkGreyBlue;
+        font-weight: 700;
+      }
+      .about, .recentPosts, .post, .comment  {
+        background-color: white;
+        padding: 35px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 2.4rem;
+        }
+        h3, img, .about {
+          margin-bottom: 25px;
+        }
+        .recentPosts {
+          li {
+            font-size: 2rem;
+            line-height: 2.9rem;
+          }
+          // Used this resource to change the bullet colour of the list: 
+          // https://www.w3schools.com/howto/howto_css_bullet_color.asp
+          ul li::before {
+            content: "\2022";
+            color: $orangeYellow; 
+            display: inline-block; 
+            width: 20px; 
+          }
+        }
+      }
+      .right {
+        .post, .commentsContainer .comment:nth-child(2) {
+          border-bottom: 5px solid $orangeYellow;
+        }
+        .post {
+          h2 {
+            font-size: 3.2rem;
+          }
+          p {
+            margin-bottom: 20px;
+          }          
+        }
+      
+        .commentsContainer {
+          margin: 30px 0;
+
+          .comment:nth-child(1) {
+            margin-bottom: 20px;
+          }
+          .comment {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 15px;
+          }
+        }
+
+        .commentForm {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          font-size: 1.8rem;
+          margin-bottom: 50px;
+
+          input {
+            border: none;
+          }
+          input::placeholder {
+            font-style: italic;
+          }
+          
+          #name, #email {
+            width: calc(50% - 5px);
+            padding: 20px;
+            padding-left: 30px;
+          }
+          #name {
+            margin-right: 5px;
+          }
+          #email {
+            margin-left: 5px;
+          }
+          #comment {
+            margin: 20px 0;
+            width: 100%;
+            padding: 35px 0 200px 30px;
+          }
+          #submit {
+            background-color: $accent;
+            width: 100%;
+            padding: 10px 0;
+            font-weight: 700;
+          }
+        }
+      }
+    }    
+  }
+}

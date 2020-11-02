@@ -23,7 +23,6 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: 2rem;
-  text-transform: uppercase;
 }
 img {
   width: 100%;
@@ -41,6 +40,9 @@ p {
   font-size: 2rem;
   letter-spacing: 0;
   line-height: 3.2rem;
+}
+ul {
+  list-style: none;
 }
 .wrapper {
   max-width: 1480px;

@@ -1,2 +1,5 @@
  - link all a tags linkable if needed
  - add hover/scale increase to gallery images! exciting :)
+ - make sure all HTML is not uppercase, use text-transform instead
+ - convert some divs to sections, where applicable
+ - make code dryer !impt
